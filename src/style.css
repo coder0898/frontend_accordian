@@ -19,7 +19,7 @@ body{
   align-items: center;
   height: 100vh;
   background-color: var(--primary-background);
-  background-image: url("./public/images/background-pattern-desktop.svg");
+  background-image: url("public/images/background-pattern-desktop.svg");
    background-repeat: no-repeat;
    background-size: contain;     
 }
