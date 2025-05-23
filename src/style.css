@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Work Sans", sans-serif;
+}
+
+:root{
+  --primary-background: rgb(255, 255, 255);
+  /* --text-color:rgb(249, 240, 255); */
+  --text-color: rgb(127, 78, 134);
+  --heading-color:rgb(47, 21, 51);
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--primary-background);
+  background-image: url("./images/background-pattern-desktop.svg");
+   background-repeat: no-repeat;
+   background-size: contain;     
+}
+
+.accordian-container{
+  background-color: var(--primary-background);
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  width: 100%;
+  max-width: 600px;
+  border-radius: 1rem;
+  transition: all .3s ease-in-out;
+}
+
+.heading{
+  display: flex;
+  gap: 20px;
+  padding: 10px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.heading h2{
+  font-size: 3.5rem;
+  color: var(--heading-color);
+}
+
+.heading img{
+  width: 40px;
+}
+
+.accordian{
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.question{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* .question h4{
+  color: var(--heading-color);
+} */
+
+.question h4:hover{
+  color: var(--text-color);
+}
+
+.icon-group{
+  transition: all .4s ease-in-out;
+}
+
+.icon-group .plus-sign{
+   margin-right: 10px;
+}
+
+.icon-group .minus-sign{
+  display: none;
+  margin-right: 10px;
+}
+
+.show .plus-sign{
+  display: none;
+}
+
+.show .minus-sign{
+  display: block;
+}
+
+.answer{
+  display: none;
+  color:var(--text-color);
+  margin-top: 15px;
+  text-align: justify;
+}
+
+.show .answer{
+  display: block;
+}
+
+@media screen and(max-width:375px) {
+   .accordian-container{
+    max-width: 200px;
+   }
+   
+   .heading h2{
+    font-size: 1.4rem;
+   }
+   .heading img{
+    width: 20px;
+   }
+   .question h4{
+    font-size: 1rem;
+   }
+
+   .plus-sign,.minus-sign{
+    margin-left: 10px;
+   }
+
+   .answer{
+    font-size: 1rem;
+   }
+}
